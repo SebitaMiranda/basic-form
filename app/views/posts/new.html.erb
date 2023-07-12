@@ -1,0 +1,23 @@
+
+    <h1 class="text-center">Crear Post</h1>
+
+    <br><br>
+<div class="card-col-6">
+    <%= form_with model: @post, method: :post do |form| %>
+        <div class="border p-5 shadow">
+        <div class="mb-4">
+                <%= form.label :title, "Titulo del post", class:"form-label" %>
+                <%= form.text_field :title, class:"form-control" %>
+            </div>
+            <div class="mb-5">
+                <%= form.label :content, " Contenido", class:"form-label" %>
+                <%= form.text_field :content, class:"form-control" %>
+            </div>
+            <div class="text-center">
+                <%= form.submit "Enviar", class:"btn btn-dark" %>
+            </div>
+        </div>
+    <% end %>
+
+</div>
+
